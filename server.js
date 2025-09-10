@@ -14,6 +14,10 @@ app.delete("/user/:id",deleteUser)
 
 app.get('/user/:id', getOne);
 
+
+
+
+
 mongoose.connect(DB).then(()=>{
   console.log('Connected to Database'),
   app.listen(PORT, ()=>{
