@@ -4,6 +4,11 @@ const usermodel = require("../models/user");
 
 
 exports.updateUser = async(req, res) => {
+
+
+
+
+    
   try {
     const {id} = req.params;
     const user = await userModel.findById(id);
