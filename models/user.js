@@ -17,13 +17,13 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
 
-    age: {
-      type: Number,
-      required: true,
-    },
-  },
-  { timestamps: true }
-);
+    age:{
+        type:Number,
+required:true,
+    }
+
+},{timestamps:true})
+
 
 const usermodel = mongoose.model("User", userSchema);
 
