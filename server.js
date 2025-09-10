@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const { getAll, getOne, deleteUser, createUser } = require('./controllers/userControllers');
 const PORT = process.env.PORT || 1234;
 const DB = process.env.DB_URI
-// const createdUser = require("./controllers/userControllers")
+
 const app = express();
 
 app.use(express.json());
