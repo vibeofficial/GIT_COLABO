@@ -39,6 +39,9 @@ exports.deleteUser = async(req, res) => {
 exports.createUser = async (req, res) => {
   try {
     const { firstName, age, gender, email } = req.body;
+    if(!firstName || !gender || !age || !email){
+        return res.status(400).json("all inputs are required")
+    }
     const data = {
       firstName,
       age,
