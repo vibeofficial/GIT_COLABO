@@ -1,4 +1,31 @@
+
+const usermodel = require("../models/user")
+
+
+exports.createUser=async(req, res)=>{
+    try {
+        
+const createdUser=await usermodel.create(req.body)
+res.status(201).json(
+    {
+        meesage:"user Created",
+        data:createdUser
+    }
+)
+
+    } catch (error) {
+        res.status(500).json({
+            message:"internal server error",
+            error:error.message
+        })
+    }
+
+}
+
+
+
 const userModel = require('../models/user');
+
 
 exports.getAll = async (req, res) => {
   try {
@@ -32,5 +59,8 @@ exports.getOne = async (req, res) => {
     })
   } catch (error) {
     res.status(500).json('Error getting all users', error.message)
-  }
+
+
 };
+
+
