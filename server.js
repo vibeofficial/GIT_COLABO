@@ -9,6 +9,7 @@ app.use(express.json());
 app.post('/create', createUser)
 app.get('users', getAll);
 app.get('/user/:id', getOne);
+app.delete("/user/:id",deleteUser)
 mongoose.connect(DB).then(()=>{
   console.log('Connected to Database'),
   app.listen(PORT, ()=>{

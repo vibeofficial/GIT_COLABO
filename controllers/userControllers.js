@@ -3,7 +3,7 @@ const usermodel = require("../models/user");
 exports.updateUser = async(req, res) => {
   try {
     const {id} = req.params;
-    const user = await userModel.findById(id);
+    const user = await usermodel.findById(id);
 
      if (!user) {
       return res.status(404).json("No user found");
