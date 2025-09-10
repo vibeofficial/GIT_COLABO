@@ -1,17 +1,27 @@
 const usermodel = require("../models/user");
 
-exports.deleteUser = async(req, res) => {
+exports.updateUser = async (req, res) => {
   try {
-    const {id} = req.params;
+  } catch (error) {
+    res.status(500).json({
+      message: "internal server error",
+      error: error.message,
+    });
+  }
+};
+
+exports.deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params;
     const user = await userModel.findById(id);
 
-     if (!user) {
+    if (!user) {
       return res.status(404).json("No user found");
     }
     await userModel.findByIdAndDelete(user._id);
-    res.status(200).json('Deleted successfully');
+    res.status(200).json("Deleted successfully");
   } catch (error) {
-     res.status(500).json({
+    res.status(500).json({
       message: "internal server error",
       error: error.message,
     });
