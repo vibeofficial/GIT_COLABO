@@ -8,15 +8,15 @@ exports.updateUser = async(req, res) => {
 
 
 
-    const name =""
+
   try {
     const {id} = req.params;
     const user = await userModel.findById(id);
 
 
-//      if (!user) {
-//       return res.status(404).json("No user found");
-//     }
+     if (!user) {
+      return res.status(404).json("No user found");
+    }
    
   } catch (error) {
      res.status(500).json({

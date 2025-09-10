@@ -10,9 +10,15 @@ app.post('/create', createUser)
 app.get('user', getAll);
 
 app.get('/user/:id', getOne);
-app.delete("/user/:id",deleteUser, console.log("joy"))
+
+app.delete("/user/:id",deleteUser)
+
 
 app.get('/user/:id', getOne);
+
+
+
+
 
 mongoose.connect(DB).then(()=>{
   console.log(' now Connected to Database'),
