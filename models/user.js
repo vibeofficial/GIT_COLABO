@@ -16,10 +16,10 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
 
-    age:{
-        type:Number,
-required:true,
-    }
+//     age:{
+//         type:Number,
+// required:true,
+//     }
 
 },{timestamps:true})
 
