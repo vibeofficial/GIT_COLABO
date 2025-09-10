@@ -10,7 +10,9 @@ app.post('/create', createUser)
 app.get('user', getAll);
 
 app.get('/user/:id', getOne);
-app.delete("/user/:id",deleteUser)// testing something by conflict
+
+app.delete("/user/:id",deleteUser)
+
 
 app.get('/user/:id', getOne);
 
