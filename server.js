@@ -8,8 +8,7 @@ const createdUser = require("./controllers/userControllers")
 const app = express();
 
 app.use(express.json());
-app.get('users', getAll);
-app.get('/user', getOne);
+
 
 mongoose.connect(DB).then(()=>{
   console.log('Connected to Database'),
