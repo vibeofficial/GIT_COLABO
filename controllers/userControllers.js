@@ -8,7 +8,7 @@ exports.updateUser = async(req, res) => {
 
 
 
-    
+    const name =""
   try {
     const {id} = req.params;
     const user = await userModel.findById(id);

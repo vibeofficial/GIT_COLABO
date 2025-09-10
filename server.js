@@ -10,7 +10,7 @@ app.post('/create', createUser)
 app.get('user', getAll);
 
 app.get('/user/:id', getOne);
-app.delete("/user/:id",deleteUser)
+app.delete("/user/:id",deleteUser, console.log("joy"))
 
 app.get('/user/:id', getOne);
 
