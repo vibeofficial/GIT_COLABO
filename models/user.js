@@ -24,6 +24,6 @@ required:true,
 },{timestamps:true})
 
 
-const usermodel = mongoose.model("User", userSchema);
+const usermodel = mongoose.model("User",  userSchema);
 
 module.exports = usermodel;
