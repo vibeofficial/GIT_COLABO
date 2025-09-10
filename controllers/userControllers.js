@@ -68,5 +68,5 @@ exports.getOne = async (req, res) => {
     res.status(500).json('Error getting all users', error.message)
 
 
-}
+};
 }
