@@ -1,3 +1,4 @@
+
 const usermodel = require("../models/user")
 
 
@@ -21,6 +22,9 @@ res.status(201).json(
 
 }
 
+
+
+const userModel = require('../models/user');
 
 
 exports.getAll = async (req, res) => {
@@ -56,7 +60,7 @@ exports.getOne = async (req, res) => {
   } catch (error) {
     res.status(500).json('Error getting all users', error.message)
 
+
 };
 
 
-};
