@@ -16,4 +16,4 @@ mongoose.connect(DB).then(()=>{
   })
 }).catch((error)=>{
   console.log('Error connecting to Database', error.message)
-})
+});
