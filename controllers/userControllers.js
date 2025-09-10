@@ -1,13 +1,17 @@
 const usermodel = require("../models/user");
 
+
+
+
 exports.updateUser = async(req, res) => {
   try {
     const {id} = req.params;
-    const user = await usermodel.findById(id);
+    const user = await userModel.findById(id);
 
-     if (!user) {
-      return res.status(404).json("No user found");
-    }
+
+//      if (!user) {
+//       return res.status(404).json("No user found");
+//     }
    
   } catch (error) {
      res.status(500).json({
@@ -16,7 +20,7 @@ exports.updateUser = async(req, res) => {
     });
   }
 };
-
+  
 
 exports.deleteUser = async(req, res) => {
   try {
