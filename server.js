@@ -13,7 +13,7 @@ app.use(express.json());
 mongoose.connect(DB).then(()=>{
   console.log('Connected to Database'),
   app.listen(PORT, ()=>{
-    console.log(`Server is listening to Port: ${PORT}`)
+    console.log(`Server is listening to Port : ${PORT}`)
   })
 }).catch((error)=>{
   console.log('Error connecting to Database', error.message)
