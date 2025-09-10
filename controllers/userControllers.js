@@ -55,6 +55,8 @@ exports.getOne = async (req, res) => {
     })
   } catch (error) {
     res.status(500).json('Error getting all users', error.message)
-  }
+
 };
 
+
+};
