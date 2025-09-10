@@ -3,8 +3,15 @@ const usermodel = require("../models/user")
 
 exports.createUser=async(req, res)=>{
     try {
-        
-const createdUser=await usermodel.create(req.body)
+        const {firstName,age,gender,email}= req.body
+        const data ={
+            firstName,
+            age,
+            gender,
+            email
+
+        }
+const createdUser=await usermodel.create(data)
 res.status(201).json(
     {
         meesage:"user Created",
