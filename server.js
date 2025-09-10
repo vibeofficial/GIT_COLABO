@@ -3,11 +3,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 1234;
 const DB = process.env.DB_URI
-
+const createdUser = require("./controllers/userControllers")
 const app = express();
 
 app.use(express.json());
 
+app.post("/user",createUser)
 
 mongoose.connect(DB).then(()=>{
   console.log('Connected to Database'),
